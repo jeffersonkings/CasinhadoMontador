@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  color: white;
+  padding: 16px 32px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* mais espaçamento entre links */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* espaço para ícone da casinha */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* separa avatar, nome e botão */
+  margin-left: auto; /* empurra para a direita */
+  font-size: 14px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout-btn {
+  background: white;
+  color: #007bff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 12px; /* separa mais do nome */
+  transition: background 0.3s, color 0.3s;
+}
+
+.logout-btn:hover {
+  background: #0056b3;
+  color: white;
+}
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 40px; /* ligeiramente mais abaixo para não colar no ícone */
+  right: 0;
+  background: white;
+  color: #333;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* sombra mais suave */
+  min-width: 200px; /* um pouco mais largo */
+  z-index: 10;
+}
+
+.menu-dropdown p:hover {
+  background-color: #f4f4f4; /* destaque ao passar o mouse */
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.menu-dropdown p {
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: default;
+}
+
+.menu-dropdown hr {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}

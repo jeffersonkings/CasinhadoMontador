@@ -1,0 +1,20 @@
+.historico-container {
+  padding: 32px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.historico-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
