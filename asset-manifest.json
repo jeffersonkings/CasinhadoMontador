@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/CasinhadoMontador%20/static/css/main.bb6e1f69.css",
+    "main.js": "/CasinhadoMontador%20/static/js/main.2e9b4d8a.js",
+    "static/js/453.20359781.chunk.js": "/CasinhadoMontador%20/static/js/453.20359781.chunk.js",
+    "static/media/imagem 04.png": "/CasinhadoMontador%20/static/media/imagem 04.4ba3254716c9c714af05.png",
+    "static/media/fundo-casinha-do-montador.jpg": "/CasinhadoMontador%20/static/media/fundo-casinha-do-montador.33f5de4428226721ed19.jpg",
+    "index.html": "/CasinhadoMontador%20/index.html",
+    "main.bb6e1f69.css.map": "/CasinhadoMontador%20/static/css/main.bb6e1f69.css.map",
+    "main.2e9b4d8a.js.map": "/CasinhadoMontador%20/static/js/main.2e9b4d8a.js.map",
+    "453.20359781.chunk.js.map": "/CasinhadoMontador%20/static/js/453.20359781.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb6e1f69.css",
+    "static/js/main.2e9b4d8a.js"
+  ]
+}
