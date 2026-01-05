@@ -51,7 +51,7 @@ export default function Header() {
             {menuAberto && (
               <div className={`menu-dropdown ${menuAberto ? "show" : ""}`}>
                 <p><strong>{role === "admin" ? "Administrador" : role === "profissional" ? "Profissional" : "Pessoal"}</strong></p>
-                <p>{user.email}</p>
+                <p>{primeiroNome}</p>
                 <hr />
                 <p onClick={handlePerfil} style={{ cursor: "pointer", color: "#007bff" }}>
                   Configurar perfil
