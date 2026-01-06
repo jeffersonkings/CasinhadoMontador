@@ -10,6 +10,7 @@ import PessoalDashboard from './pages/PessoalDashboard';
 import ProfissionalDashboard from './pages/ProfissionalDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Historico from './pages/Historico';
+import Saudacao from './pages/Saudacao';
 import Home from './pages/Home';
 import Header from './components/Header';
 import ProtectedRoute from './routes/ProtectedRoute';
@@ -30,7 +31,8 @@ function AppContent() {
     <>
       {user && <Header />}
       <Routes>
-        <Route path="/" element={user ? <Navigate to="/home" /> : <Login />} />
+       <Route path="/" element={user ? <Navigate to="/home" /> : <Saudacao />} /> 
+       <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/recuperar" element={<RecuperarSenha />} />
 

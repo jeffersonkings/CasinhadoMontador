@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { FaHome, FaEllipsisV } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 
 export default function Header() {
@@ -11,6 +11,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   const primeiroNome = user?.displayName?.split(" ")[0] || user?.email?.split("@")[0];
+  const avatarURL = user?.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(primeiroNome)}&background=007bff&color=fff`;
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -29,41 +30,40 @@ export default function Header() {
 
   const handlePerfil = () => {
     navigate("/perfil");
+    setMenuAberto(false);
   };
 
   return (
-    <header className="header">
-      <h1 className="logo">Casinha do Montador</h1>
-      <nav className="nav">
-        <Link to="/home">
-          <FaHome style={{ marginRight: "6px" }} />
-          Home
-        </Link>
-        <Link to={`/${role}`}>Dashboard</Link>
-        <Link to="/historico">Histórico</Link>
+    <>
+      <header className="header">
+        <h1 className="logo">Casinha do Montador</h1>
+        <div className="menu-toggle" onClick={() => setMenuAberto(true)}>
+          <img src={avatarURL} alt="Avatar" className="avatar" />
+          <FaBars className="hamburguer" />
+        </div>
+      </header>
 
-        {user && (
-          <div className="user-menu" ref={menuRef}>
-            <div className="menu-icon" onClick={() => setMenuAberto(!menuAberto)}>
-              <FaEllipsisV />
-            </div>
-
-            {menuAberto && (
-              <div className={`menu-dropdown ${menuAberto ? "show" : ""}`}>
-                <p><strong>{role === "admin" ? "Administrador" : role === "profissional" ? "Profissional" : "Pessoal"}</strong></p>
-                <p>{primeiroNome}</p>
-                <hr />
-                <p onClick={handlePerfil} style={{ cursor: "pointer", color: "#007bff" }}>
-                  Configurar perfil
-                </p>
-                <p onClick={handleLogout} style={{ cursor: "pointer", color: "#007bff" }}>
-                  Sair
-                </p>
-              </div>
-            )}
+      <div className={`side-menu ${menuAberto ? "open" : ""}`} ref={menuRef}>
+        <div className="side-menu-header">
+          <img src={avatarURL} alt="Avatar" className="avatar-large" />
+          <div>
+            <strong>{primeiroNome}</strong>
+            <p className="role-label">
+              {role === "admin" ? "Administrador" : role === "profissional" ? "Profissional" : "Pessoal"}
+            </p>
           </div>
-        )}
-      </nav>
-    </header>
+          <FaTimes className="close-icon" onClick={() => setMenuAberto(false)} />
+        </div>
+        <nav className="side-nav">
+          <Link to="/home" onClick={() => setMenuAberto(false)}>🏠 Home</Link>
+          <Link to={`/${role}`} onClick={() => setMenuAberto(false)}>📋 Dashboard</Link>
+          <Link to="/historico" onClick={() => setMenuAberto(false)}>📑 Histórico</Link>
+          <Link to="/perfil" onClick={handlePerfil}>⚙️ Perfil</Link>
+          <span onClick={handleLogout}>🚪 Sair</span>
+        </nav>
+      </div>
+
+      {menuAberto && <div className="overlay" onClick={() => setMenuAberto(false)} />}
+    </>
   );
 }
