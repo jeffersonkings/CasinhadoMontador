@@ -4,9 +4,15 @@
   min-height: 100vh;
 }
 
+.historico-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 24px;
+}
+
 .historico-lista {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   margin-top: 24px;
 }
@@ -16,5 +22,39 @@
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h4 {
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .historico-container {
+    padding: 24px 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card h4 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
 }

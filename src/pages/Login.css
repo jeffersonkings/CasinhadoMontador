@@ -55,6 +55,7 @@
   background: white;
   cursor: pointer;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .role-toggle button.active {
@@ -83,10 +84,8 @@
   background: #0056b3;
 }
 
-.google-btn {
-  background: #db4437;
-  color: white;
-  border: none;
+.google-btn,
+.facebook-btn {
   padding: 10px;
   border-radius: 6px;
   font-weight: bold;
@@ -94,19 +93,19 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  font-size: 14px;
+}
+
+.google-btn {
+  background: #db4437;
+  color: white;
+  border: none;
 }
 
 .facebook-btn {
   background: #3b5998;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
 .erro {
@@ -121,4 +120,49 @@
   font-size: 13px;
   color: #007bff;
   cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 24px 12px;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  .login-box {
+    padding: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .role-toggle {
+    flex-direction: column;
+  }
+
+  .role-toggle button {
+    width: 100%;
+  }
+
+  .google-btn,
+  .facebook-btn {
+    font-size: 13px;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .login-links {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
 }

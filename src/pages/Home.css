@@ -93,6 +93,7 @@
   font-size: 12px;
   color: #666;
 }
+
 .info-area {
   margin-top: 24px;
   display: flex;
@@ -119,3 +120,51 @@
   margin: 4px 0;
 }
 
+/* Responsividade */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 24px 12px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  .home-box {
+    padding: 20px;
+  }
+
+  .home-box h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card h4 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .info-box {
+    padding: 14px;
+  }
+
+  .info-box h4 {
+    font-size: 15px;
+  }
+
+  .info-box p {
+    font-size: 12px;
+  }
+}

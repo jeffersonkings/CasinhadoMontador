@@ -15,7 +15,7 @@
 .logo-img {
   width: 120px;
   margin-bottom: 10px;
-  border-radius:100%;
+  border-radius: 100%;
   border: yellow 1px solid;
 }
 
@@ -91,6 +91,7 @@
   background: white;
   cursor: pointer;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .role-toggle button.active {
@@ -129,4 +130,53 @@
   font-size: 12px;
   text-align: center;
   color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .cadastro-container {
+    padding: 24px 12px;
+  }
+
+  .logo-img {
+    width: 80px;
+  }
+
+  .logo-area h1 {
+    font-size: 18px;
+  }
+
+  .cadastro-box {
+    padding: 20px;
+  }
+
+  .cadastro-box h2 {
+    font-size: 20px;
+  }
+
+  .role-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .role-toggle button {
+    width: 100%;
+  }
+
+  .social-buttons button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .cadastro-box input {
+    font-size: 13px;
+  }
+
+  .cadastro-box button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .termos {
+    font-size: 11px;
+  }
 }

@@ -4,6 +4,9 @@
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .service-card:hover {
@@ -39,4 +42,24 @@
 .service-status.unavailable {
   background-color: #fdecea;
   color: #c62828;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .service-card {
+    padding: 16px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-description {
+    font-size: 13px;
+  }
+
+  .service-status {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 }
