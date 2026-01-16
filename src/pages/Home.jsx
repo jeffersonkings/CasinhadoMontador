@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Logo from "../components/image/fundo-casinha-do-montador.jpg";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import { FaClipboardList, FaCog, FaBell } from "react-icons/fa";
@@ -63,19 +62,13 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <div className="logo-area">
-        <img src={Logo} alt="Logo da Casinha do Montador" className="logo-img" />
-        <h1>Casinha do Montador</h1>
-      </div>
-
       <div className="home-box">
         <h2>Bem-vindo(a), {primeiroNome}!</h2>
-        <p>Você está acessando o painel
+        <p>
+          Você está acessando o painel
           <strong>
-           { 
-            role === "admin" ? "Administrador" :
-            role === "profissional" ? "Profissional" : "Pessoal"
-           }
+            {role === "admin" ? " Administrador" :
+             role === "profissional" ? " Profissional" : " Pessoal"}
           </strong>.
         </p>
         <p>Aqui você pode acompanhar suas solicitações, configurar seu perfil e explorar os serviços disponíveis.</p>
@@ -125,7 +118,6 @@ export default function Home() {
               agenda.map(a => (
                 <p key={a.id}>
                   {a.tipo} em {a.data?.toDate ? a.data.toDate().toLocaleDateString("pt-BR") : "Data inválida"}
-
                 </p>
               ))
             )}

@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f9f9f9;
   min-height: 100vh;
   padding: 40px 16px;
 }
@@ -15,168 +14,16 @@
 .logo-img {
   width: 120px;
   margin-bottom: 10px;
-  border-radius: 100%;
-  border: yellow 1px solid;
-}
-
-.logo-area h1 {
-  font-size: 22px;
-  color: #007bff;
+  border-radius: 50%;
 }
 
 .cadastro-box {
-  background: white;
+  background: var(--card-bg);
   padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   max-width: 360px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.cadastro-box h2 {
-  text-align: center;
-  color: #333;
-}
-
-.social-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.social-buttons button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.social-buttons button:first-child {
-  background: #db4437;
-  color: white;
-}
-
-.social-buttons button:last-child {
-  background: #3b5998;
-  color: white;
-}
-
-.divider {
-  text-align: center;
-  font-size: 14px;
-  color: #999;
-  margin: 8px 0;
-}
-
-.role-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.role-toggle button {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #007bff;
-  border-radius: 6px;
-  background: white;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.role-toggle button.active {
-  background: #007bff;
-  color: white;
-}
-
-.cadastro-box input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.cadastro-box button[type="submit"] {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.cadastro-box button[type="submit"]:hover {
-  background: #0056b3;
-}
-
-.error {
-  color: red;
-  font-size: 14px;
-  text-align: center;
-}
-
-.termos {
-  font-size: 12px;
-  text-align: center;
-  color: #666;
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-  .cadastro-container {
-    padding: 24px 12px;
-  }
-
-  .logo-img {
-    width: 80px;
-  }
-
-  .logo-area h1 {
-    font-size: 18px;
-  }
-
-  .cadastro-box {
-    padding: 20px;
-  }
-
-  .cadastro-box h2 {
-    font-size: 20px;
-  }
-
-  .role-toggle {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .role-toggle button {
-    width: 100%;
-  }
-
-  .social-buttons button {
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  .cadastro-box input {
-    font-size: 13px;
-  }
-
-  .cadastro-box button[type="submit"] {
-    font-size: 14px;
-  }
-
-  .termos {
-    font-size: 11px;
-  }
 }

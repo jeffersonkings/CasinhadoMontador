@@ -1,15 +1,13 @@
 .perfil-container {
   padding: 32px;
-  background-color: #1c1c1c;
   min-height: 100vh;
-  color: white;
 }
 
 .perfil-box {
-  background: white;
-  color: #333;
+  background: var(--card-bg);
   padding: 24px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   max-width: 500px;
   margin: auto;
   display: flex;
@@ -18,22 +16,12 @@
 }
 
 .perfil-box label {
-  display: block;
   margin-top: 16px;
   font-weight: bold;
 }
 
-.perfil-box input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
 .perfil-box img {
   max-width: 100px;
-  height: auto;
   border-radius: 50%;
   margin-top: 8px;
 }
@@ -43,52 +31,4 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-}
-
-.perfil-botoes button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  flex: 1 1 120px;
-}
-
-.perfil-botoes button:hover {
-  background-color: #0056b3;
-}
-
-.mensagem {
-  text-align: center;
-  margin-bottom: 16px;
-  color: lightgreen;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .perfil-container {
-    padding: 20px 16px;
-  }
-
-  .perfil-box {
-    padding: 20px;
-  }
-
-  .perfil-box label {
-    font-size: 14px;
-  }
-
-  .perfil-box input {
-    font-size: 14px;
-  }
-
-  .perfil-botoes {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .perfil-botoes button {
-    width: 100%;
-  }
 }

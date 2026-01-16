@@ -14,6 +14,8 @@ import Saudacao from './pages/Saudacao';
 import Home from './pages/Home';
 import Header from './components/Header';
 import ProtectedRoute from './routes/ProtectedRoute';
+import './Global.css';
+
 
 function AppContent() {
   const { user, authLoading } = React.useContext(AuthContext);

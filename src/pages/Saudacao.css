@@ -1,38 +1,217 @@
-.saudacao-container {
+.saudacao-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: url("../components/image/imagem 03.png") no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+}
+
+/* Lado esquerdo */
+.saudacao-left {
+  flex: 1;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius);
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: #007bff;
-  color: white;
-  min-height: 100vh;
-  padding: 40px 16px;
   text-align: center;
+  animation: fadeInLeft 0.6s ease-in-out;
 }
 
-.logo-img {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.saudacao-left h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #fff;
 }
 
-.saudacao-container h1 {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.saudacao-container p {
+.saudacao-left p {
   font-size: 16px;
   margin-bottom: 24px;
-  max-width: 320px;
+  color: #ddd;
 }
 
-.saudacao-container button {
-  background: white;
-  color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+.saudacao-left .slogan {
+  font-style: italic;
+  font-size: 18px;
+  color: #ffdd57;
+  margin-top: 12px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* Lado direito */
+.saudacao-right {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--border-radius);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 0.6s ease-in-out;
+}
+
+.logo-login {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-login .logo-img {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  border: 2px solid #ffdd57;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.saudacao-right h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.tabs button {
+  flex: 1;
+}
+
+.tabs .active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+form {
+  width: 100%;
+  max-width: 300px;
+}
+
+form input {
+  margin-bottom: 14px;
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.social-login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.avatar-preview {
+  margin-top: 20px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--primary-color);
+}
+
+/* Mensagem de boas-vindas */
+.welcome-message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--secondary-color);
   font-weight: bold;
-  cursor: pointer;
+}
+
+/* Extras */
+.toggle-bar {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.toggle-bar button {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+}
+
+.toggle-bar button:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Animações */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatTools {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(-10px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 0.2; }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .saudacao-wrapper {
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+  }
+
+  .saudacao-left,
+  .saudacao-right {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 }
